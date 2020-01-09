@@ -1,8 +1,12 @@
 package guru.springframework.petclinic.model;
 
-public class PetType {
+public class PetType extends BaseEntity {
 
     private String name;
+
+    public PetType(Long id) {
+        super(id);
+    }
 
     public String getName() {
         return name;

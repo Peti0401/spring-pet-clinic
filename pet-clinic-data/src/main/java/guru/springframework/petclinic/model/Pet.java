@@ -2,11 +2,15 @@ package guru.springframework.petclinic.model;
 
 import java.time.LocalDate;
 
-public class Pet {
+public class Pet extends BaseEntity {
 
     private PetType petType;
     private Owner owner;
     private LocalDate birthDate;
+
+    public Pet(Long id) {
+        super(id);
+    }
 
     public PetType getPetType() {
         return petType;
